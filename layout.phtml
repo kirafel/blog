@@ -6,19 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Display Dynamic title for the project -->
     <title><?= $title ?></title>
+
+    <!-- Import Poppins Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
     <!-- Import the Bootstrap css CDN -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+
     <!-- Import external StyleSheets -->
-    <link rel="stylesheet" href="assets/sass/stye.css">
+    <link rel="stylesheet" href="assets/sass/style.css">
 </head>
 
 <body>
-    <h1 class="text-danger">Blog</h1>
+    <!-- Header of the project -->
+    <header>
+        <div data-collapse="tiny" data-animation="over-right" data-duration="400" role="banner" class="navbar w-nav"
+            style="opacity: 1;">
+            <div class="w-container"><a href="index.php" aria-current="page" class="logo w-nav-brand w--current"
+                    aria-label="home">
+                    <div class="long-text">Escape.</div>
+                </a>
+                <nav role="navigation" class="nav-menu w-nav-menu"><a href="/" aria-current="page"
+                        class="nav-link w-nav-link w--current" style="max-width: 728px;">Home</a><a href="/categories"
+                        class="nav-link w-nav-link" style="max-width: 728px;">Categories</a><a href="/about"
+                        class="nav-link w-nav-link" style="max-width: 728px;">About</a><a href="/contact"
+                        class="nav-link w-nav-link" style="max-width: 728px;">Contact</a><a href="#"
+                        class="close-x w-hidden-main w-hidden-medium w-hidden-small">×</a></nav>
+                <div class="menu-button w-hidden-main w-hidden-medium w-hidden-small w-clearfix w-nav-button"
+                    style="-webkit-user-select: text;" aria-label="menu" role="button" tabindex="0"
+                    aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
+                    <div class="menu-icon w-icon-nav-menu"></div>
+                    <div class="menu-link">MENU</div>
+                </div>
+            </div>
+            <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
+        </div>
+    </header>
+
+    <?php include $template . '.phtml'?>
+
+    <footer></footer>
 
     <!-- Import the jquery library-->
-    <script src="node_modules/jquery/jquery.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
     <!-- Import the Bootstarp JavaScript CDN -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Import JavaScript Files  -->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
